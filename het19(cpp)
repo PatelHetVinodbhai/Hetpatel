@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+class Circle {
+private:
+    double radius;
+    const double PI = 3.14159;
+public:
+    Circle() : radius(1.0) {} // Default constructor with radius 1.0
+    double calculateArea() {
+        return PI * radius * radius;
+    }
+};
+
+int main() {
+    Circle circle; // Create a Circle object using the default constructor
+    double area = circle.calculateArea(); // Calculate the area using the Circle object
+    cout << "Area: " << area << endl; // Output the calculated area
+    return 0;
+}
