@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+private:
+    float length;
+    float width;
+
+public:
+    // Parameterized constructor
+    Rectangle(float l, float w) {
+        length = l;
+        width = w;
+    }
+
+    float calculateArea() {
+        return length * width;
+    }
+};
+
+class Circle {
+private:
+    float radius;
+
+public:
+    // Parameterized constructor
+    Circle(float r) {
+        radius = r;
+    }
+
+    float calculateArea() {
+        return 3.14 * radius * radius;
+    }
+};
+
+int main() {
+    // Create a rectangle object with parameterized constructor
+    Rectangle rect(5, 6);
+    cout << "Area of rectangle: " << rect.calculateArea() << endl;
+
+    // Create a circle object with parameterized constructor
+    Circle circ(3);
+    cout << "Area of circle: " << circ.calculateArea() << endl;
+
+    return 0;
+}
